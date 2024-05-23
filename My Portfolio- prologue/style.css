@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Create a flex container */
+.flex-container {
+    display: flex;
+    background-color: #4c4c4e;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Align items vertically */
+}
+
+/* Style individual items */
+.item {
+    flex: 1; /* Grow equally to fill available space */
+    background-color: #171830;
+    min-width: 300px; /* Set a minimum width for each item */
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;}
+
+.container {width: 80%;
+            margin: 0 auto;
+            padding: 20px;}
+
+.section-title{font-size: 1.em;
+                margin-bottom: 10px;
+                text-align: center;}
+            
+.section-content {font-size: 0.5em;
+                margin-bottom: 20px;
+                text-align: center;
+                line-height: 1.5;}
+
+.image-container {text-align: center;}
+
+.image-container img{max-width: 100%;
+                    height: auto;}
+
+
+    
+
+

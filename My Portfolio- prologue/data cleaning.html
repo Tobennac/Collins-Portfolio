@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Collins Tobenna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet"
+		href="style.css">
+		<style>
+			/* Create a flex container */
+			.flex-container {
+				display: flex;
+				background-color: #4c4c4e;
+				flex-wrap: wrap; /* Allow items to wrap to the next line */
+				justify-content: space-between; /* Distribute items evenly along the main axis */
+				align-items: center; /* Align items vertically */
+			}
+			
+			/* Style individual items */
+			.item {
+				flex: 1; /* Grow equally to fill available space */
+				background-color: #171830;
+				height: 300px; /* Set a minimum width for each item */
+				padding: 10px;
+				border: 1px solid #ddd;
+				margin: 10px;
+			}
+			
+			</style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Main -->
+
+		<div id="container">
+			<div class="section"></div>
+			<h2 class="section-title">Project Overview<h2>
+				<p class="section-content">This project involved cleaning and preparing a housing dataset to ensure data integrity and reliability. The main task included date format conversion, handling empty fields by setting them to 'NULL', populating missing porperty addresses, and removing duplicate records. check out the script on my <a href="https://github.com/Tobennac/SQL-repository/blob/main/Data%20cleaning%20script.sql">Github repository</a>.</p>
+			</div>
+			
+			<div class="flex-container">
+				<div class="item">
+					<h2>GOAL</h2>
+					<p>The objective of this project was to clean and prepare the Nashville housing dataset for analysis by handling date conversions, removing empty fields, populating missing addresses, and eliminating duplicate records</p>
+				</div>
+				<div class="item">
+					<h2>RESULT</h2>
+					<p>The dataset was successfully cleaned by converting date fields, filling in missing property addresses, setting empty fields to `NULL`, and removing duplicates. This enhanced the data's integrity and reliability for subsequent analysis.</p>
+				</div>
+				<div class="item">
+					<h2>PROJECT DURATION</h2>
+					<p>The project was completed over a span of 2 days. </p>
+				</div>
+			</div>
+
+			<div id="container">
+				<div class= section></div>
+					<h2 class="section-title">Date Conversion And Handling Empty Fields<h2>
+					<p class="section-content">The ‘SaleDate” column was originally in a non-date format. To ensure consistency and facilitate data-related operations, I converted the field to a proper date format using the CONVERT function. Also, several fields contained empty string, which can cause issues during analysis. I used the NULLIF function to replace these empty strings with NULL, a more appropriate representation for missing data in SQL.
+						</p>
+			</div>
+			<div class="image-container"><img src="images/Portfolio pics/Data cleaning/Empty fields.jpg"></div>
+
+			<div id="container">
+				<div class= section></div>
+					<h2 class="section-title">Populating Missing Values<h2>
+					<p class="section-content">For records where the PropertyAddress field was empty or null, I used a join operation to find matching ParcleID values and populate the PropertyAddress field with corresponding values from other records. The COALESCE and NULLIF functions were used to ensure that the most accurate addressed were filled in. 
+						</p>
+			</div>
+			<div class="image-container"><img src="images/Portfolio pics/Data cleaning/Populate.jpg" alt="Populate empty fields"></div>
+
+            <div id="container">
+				<div class= section></div>
+					<h2 class="section-title">Handling Duplicates<h2>
+					<p class="section-content">This is one of the most important steps to take before exploring/analysing any dataset. In this project, records where the PropertyAddress field was empty or null, I used a join operation to find matching ParcleID values and populate the PropertyAddress field with corresponding values from other records. The COALESCE and NULLIF functions were used to ensure that the most accurate addressed were filled in. 
+						</p>
+			</div>
+			<div class="image-container"><img src="images/Portfolio pics/Data cleaning/Duplicate .jpg" alt="Handling duplicates">
+                <ul class="actions">
+                    <li><a href="https://github.com/Tobennac/SQL-repository/blob/main/Data%20cleaning%20script.sql" class="large">VIEW REPOSITORY</a></li>
+                </div>
+            </div>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<div>
+								<h2>Get In Touch</h2>
+							</header>
+
+							<p2em;>Feel free to reach out- I'd love to chat about data, tech, or anything under the sun!.</p>
+
+							<form method="post" action="https://formspree.io/f/xyyraklq">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
